@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SKU_FaceTransformation.Models
+namespace FacesentimentAnalyzer.Models
 {
     internal static class FaceSentimentAnalyzerConst
 
     {
 
-        public const string WINML_MODEL_FILENAME = "emotion_ferplus.onnx";
+        public const string WINML_MODEL_FILENAME = "emotion-ferplus-8.onnx";
 
         public const string WINML_MODEL_INPUTNAME = "Input3";
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.AI.Skills.SkillInterfacePreview;
+﻿
+using Microsoft.AI.Skills.SkillInterface;
 using Microsoft.Toolkit.Uwp.Helpers;
 using Microsoft.Toolkit.Uwp.UI.Controls;
 using SKU_FaceTransformation.Models;

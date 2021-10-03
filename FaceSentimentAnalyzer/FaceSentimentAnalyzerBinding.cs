@@ -1,4 +1,5 @@
-﻿using Microsoft.AI.Skills.SkillInterfacePreview;
+﻿
+using Microsoft.AI.Skills.SkillInterface;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using Windows.AI.MachineLearning;
 using Windows.Foundation;
 using Windows.Media;
 
-namespace SKU_FaceTransformation.Models
+namespace FacesentimentAnalyzer.Models
 {
     /// Defines the set of possible emotion label scored by this skill
     public enum SentimentType

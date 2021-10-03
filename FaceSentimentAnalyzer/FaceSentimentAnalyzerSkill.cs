@@ -1,4 +1,5 @@
-﻿using Microsoft.AI.Skills.SkillInterfacePreview;
+﻿
+using Microsoft.AI.Skills.SkillInterface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ using Windows.Media;
 using Windows.Media.FaceAnalysis;
 using Windows.Storage;
 
-namespace SKU_FaceTransformation.Models
+namespace FacesentimentAnalyzer.Models
 {
     public sealed class FaceSentimentAnalyzerSkill :ISkill
     {

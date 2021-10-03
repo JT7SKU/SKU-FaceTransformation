@@ -1,4 +1,5 @@
-﻿using Microsoft.AI.Skills.SkillInterfacePreview;
+﻿
+using Microsoft.AI.Skills.SkillInterface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Graphics.Imaging;
 
-namespace SKU_FaceTransformation.Models
+namespace FacesentimentAnalyzer.Models
 {
     public sealed class FaceSentimentAnalyzerDescriptor :ISkillDescriptor
     {
@@ -43,9 +44,13 @@ namespace SKU_FaceTransformation.Models
                     true, // isRequired (since this is an input, it is required to be bound before the evaluation occurs)
                     -1, // width
                     -1, // height
-                    -1, // maxDimension
+                    //-1, // maxDimension
                     BitmapPixelFormat.Nv12,
-                    BitmapAlphaMode.Ignore)
+                    BitmapAlphaMode.Ignore,
+                    ImageStretchKind.Fill,
+                    ImageInterpolationKind.Bicubic)
+                 
+               
             );
 
             // Describe first output feature
@@ -55,7 +60,7 @@ namespace SKU_FaceTransformation.Models
                     "FaceRectangle", // skill output feature name
                     "a face bounding box in relative coordinates (left, top, right, bottom)",
                     false, // isRequired (since this is an output, it automatically get populated after the evaluation occurs)
-                    new List<long>() { 4 }, // tensor shape
+                    new List<int>() { 4 }, // tensor shape
                     SkillElementKind.Float)
                 );
 
@@ -65,7 +70,7 @@ namespace SKU_FaceTransformation.Models
                     FaceSentimentAnalyzerConst.SKILL_OUTPUTNAME_FACESENTIMENTSCORES, // skill output feature name
                     "the prediction score for each class",
                     false, // isRequired (since this is an output, it automatically get populated after the evaluation occurs)
-                    new List<long>() { 1, 8 }, // tensor shape
+                    new List<int>() { 1, 8 }, // tensor shape
                     SkillElementKind.Float)
                 );
         }
